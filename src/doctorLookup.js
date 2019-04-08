@@ -14,7 +14,7 @@ export default class DoctorLookup {
       if (this.doctorName != "" && this.medicalIssue != "") {
         url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${this.doctorName}&query=${that.condition}&location=or-portland&skip=0&user_key=${process.env.exports.apiKey}`;
       }
-      else if (this.doctorName == "") {
+      else if (this.medicalIssue == "") {
         url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${that.medicalIssue}&location=or-portland&skip=0&limit=10&user_key=${process.env.exports.apiKey}`;
       }
       else {
